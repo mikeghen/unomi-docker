@@ -33,4 +33,4 @@ COPY ./start_with_ip.sh ./start_with_ip.sh
 EXPOSE 9443
 EXPOSE 8181
 
-CMD ["./start_with_ip.sh"]
+CMD ["./entrypoint.sh"]
