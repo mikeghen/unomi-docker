@@ -28,7 +28,7 @@ RUN tar -xzf unomi-1.3.0-incubating-bin.tar.gz
 RUN mv unomi-1.3.0-incubating/* .
 RUN rm unomi-1.3.0-incubating-bin.tar.gz
 RUN rm -r unomi-1.3.0-incubating
-COPY ./start_with_ip.sh ./start_with_ip.sh
+COPY ./entrypoint.sh ./entrypoint.sh
 
 EXPOSE 9443
 EXPOSE 8181
