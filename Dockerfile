@@ -33,4 +33,4 @@ COPY ./entrypoint.sh ./entrypoint.sh
 EXPOSE 9443
 EXPOSE 8181
 
-CMD ["./entrypoint.sh"]
+CMD ["/bin/bash", "./entrypoint.sh"]

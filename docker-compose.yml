@@ -1,7 +1,6 @@
 version: '2.2'
 services:
-  elasticsearch: # Elasticsearch Instance
-    container_name: gs-search
+  elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:5.6.3
     volumes: # Persist ES data in seperate "esdata" volume
       - esdata1:/usr/share/elasticsearch/data
@@ -16,7 +15,7 @@ services:
       - "9200:9200"
 
   unomi:
-    image: unomi
+    image: mikeghen/unomi:1.3
     container_name: unomi
     environment:
       - ELASTICSEARCH_HOST=elasticsearch
@@ -29,6 +28,4 @@ services:
 
 volumes: # Define seperate volume for Elasticsearch data
   esdata1:
-    driver: local
-  esdata2:
     driver: local
