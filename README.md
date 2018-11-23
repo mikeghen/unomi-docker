@@ -1,11 +1,11 @@
-# Unomi Docker image
-:construction:
+# Unomi Docker Image
 
 # Running Unomi
 Unomi requires ElasticSearch so it is recommended to run Unomi and ElasticSearch using docker-compose:
 ```
 docker-compose up
 ```
+
 # Environment variables
 
 When you start the `unomi` image, you can adjust the configuration of the Unomi instance by passing one or more environment variables on the `docker run` command line.
