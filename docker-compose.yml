@@ -15,7 +15,7 @@ services:
       - "9200:9200"
 
   unomi:
-    image: mikeghen/unomi:1.3
+    image: unomi
     container_name: unomi
     environment:
       - ELASTICSEARCH_HOST=elasticsearch
@@ -25,6 +25,9 @@ services:
       - 9443:9443
     links:
       - elasticsearch
+    depends_on:
+      - elasticsearch
+
 
 volumes: # Define seperate volume for Elasticsearch data
   esdata1:
