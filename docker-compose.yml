@@ -15,7 +15,7 @@ services:
       - "9200:9200"
 
   unomi:
-    image: unomi
+    image: mikeghen/unomi:1.3
     container_name: unomi
     environment:
       - ELASTICSEARCH_HOST=elasticsearch
